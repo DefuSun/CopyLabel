@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DFCopyLable.h
 //  CopyLabel
 //
 //  Created by mac on 16/6/1.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DFCopyLabel : UILabel
 
-@property (nonatomic, strong) NSArray *dataArray;
 
 @end
-

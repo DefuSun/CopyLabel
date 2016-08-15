@@ -15,6 +15,9 @@
 		0401EB7E1CFE7CE5007CD5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB7C1CFE7CE5007CD5DC /* LaunchScreen.storyboard */; };
 		0401EB891CFE7CE5007CD5DC /* CopyLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB881CFE7CE5007CD5DC /* CopyLabelTests.m */; };
 		0401EB941CFE7CE5007CD5DC /* CopyLabelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB931CFE7CE5007CD5DC /* CopyLabelUITests.m */; };
+		0401EBA31CFE7D16007CD5DC /* DFCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401EBA21CFE7D16007CD5DC /* DFCopyLabel.m */; };
+		0401EBA61CFEB86C007CD5DC /* DFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401EBA51CFEB86C007CD5DC /* DFTableViewCell.m */; };
+		04E1EB951D0125FB00C57EE1 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1EB941D0125FB00C57EE1 /* ViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		0401EB8F1CFE7CE5007CD5DC /* CopyLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopyLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0401EB931CFE7CE5007CD5DC /* CopyLabelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyLabelUITests.m; sourceTree = "<group>"; };
 		0401EB951CFE7CE5007CD5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0401EBA11CFE7D16007CD5DC /* DFCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCopyLabel.h; sourceTree = "<group>"; };
+		0401EBA21CFE7D16007CD5DC /* DFCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCopyLabel.m; sourceTree = "<group>"; };
+		0401EBA41CFEB86C007CD5DC /* DFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTableViewCell.h; sourceTree = "<group>"; };
+		0401EBA51CFEB86C007CD5DC /* DFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTableViewCell.m; sourceTree = "<group>"; };
+		04E1EB931D0125FB00C57EE1 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		04E1EB941D0125FB00C57EE1 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +112,14 @@
 			children = (
 				0401EB711CFE7CE5007CD5DC /* AppDelegate.h */,
 				0401EB721CFE7CE5007CD5DC /* AppDelegate.m */,
+				0401EBA11CFE7D16007CD5DC /* DFCopyLabel.h */,
+				0401EBA21CFE7D16007CD5DC /* DFCopyLabel.m */,
+				0401EBA41CFEB86C007CD5DC /* DFTableViewCell.h */,
+				0401EBA51CFEB86C007CD5DC /* DFTableViewCell.m */,
 				0401EB741CFE7CE5007CD5DC /* ViewController.h */,
 				0401EB751CFE7CE5007CD5DC /* ViewController.m */,
+				04E1EB931D0125FB00C57EE1 /* ViewController1.h */,
+				04E1EB941D0125FB00C57EE1 /* ViewController1.m */,
 				0401EB771CFE7CE5007CD5DC /* Main.storyboard */,
 				0401EB7A1CFE7CE5007CD5DC /* Assets.xcassets */,
 				0401EB7C1CFE7CE5007CD5DC /* LaunchScreen.storyboard */,
@@ -271,6 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0401EB761CFE7CE5007CD5DC /* ViewController.m in Sources */,
+				0401EBA61CFEB86C007CD5DC /* DFTableViewCell.m in Sources */,
+				04E1EB951D0125FB00C57EE1 /* ViewController1.m in Sources */,
+				0401EBA31CFE7D16007CD5DC /* DFCopyLabel.m in Sources */,
 				0401EB731CFE7CE5007CD5DC /* AppDelegate.m in Sources */,
 				0401EB701CFE7CE5007CD5DC /* main.m in Sources */,
 			);
@@ -496,6 +514,7 @@
 				0401EB9A1CFE7CE5007CD5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0401EB9B1CFE7CE5007CD5DC /* Build configuration list for PBXNativeTarget "CopyLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				0401EB9D1CFE7CE5007CD5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0401EB9E1CFE7CE5007CD5DC /* Build configuration list for PBXNativeTarget "CopyLabelUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				0401EBA01CFE7CE5007CD5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

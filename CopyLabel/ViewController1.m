@@ -1,43 +1,41 @@
 //
-//  ViewController.m
+//  ViewController1.m
 //  CopyLabel
 //
-//  Created by mac on 16/6/1.
+//  Created by mac on 16/6/3.
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "DFCopyLabel.h"
-#import "DFTableViewCell.h"
 #import "ViewController1.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface ViewController1 ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    DFCopyLabel *label = [[DFCopyLabel alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
-//    label.backgroundColor = [UIColor greenColor];
-//    [self.view addSubview:label];
-//    label.text = @"22211";
-  
-
+    //    DFCopyLabel *label = [[DFCopyLabel alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+    //    label.backgroundColor = [UIColor greenColor];
+    //    [self.view addSubview:label];
+    //    label.text = @"22211";
+    
+    
     _dataArray = @[@"111111",@"222222",@"333333",@"444444",@"111111",@"222222",@"333333",@"444444",@"111111",@"222222",@"333333",@"444444"];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 0) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.backgroundColor = [UIColor purpleColor];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableView];
-
-//    DFCopyLabel *label1 = [[DFCopyLabel alloc] initWithFrame:CGRectMake(100, self.view.frame.size.height - 40, 100, 30)];
-//    label1.backgroundColor = [UIColor yellowColor];
-//    [self.view addSubview:label1];
+    
+    //    DFCopyLabel *label1 = [[DFCopyLabel alloc] initWithFrame:CGRectMake(100, self.view.frame.size.height - 40, 100, 30)];
+    //    label1.backgroundColor = [UIColor yellowColor];
+    //    [self.view addSubview:label1];
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -45,12 +43,12 @@
     UIView *headerView = [[UIView alloc] init];
     headerView.backgroundColor = [UIColor greenColor];
     
-    DFCopyLabel *label1 = [[DFCopyLabel alloc] initWithFrame:CGRectMake(5, 0, tableView.frame.size.width/2 - 10, 44)];
+    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, tableView.frame.size.width/2 - 10, 44)];
     label1.text = @"充值码";
     label1.textAlignment = NSTextAlignmentCenter;
     [headerView addSubview:label1];
     
-    DFCopyLabel *label2 = [[DFCopyLabel alloc] initWithFrame:CGRectMake(tableView.frame.size.width/2 + 5, 0, tableView.frame.size.width/2 - 10, 44)];
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(tableView.frame.size.width/2 + 5, 0, tableView.frame.size.width/2 - 10, 44)];
     label2.text = @"到期时间";
     label2.textAlignment = NSTextAlignmentCenter;
     [headerView addSubview:label2];
@@ -104,34 +102,23 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellId = @"cell";
-    DFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[DFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
-
     
-//    DFCopyLabel *label = [[DFCopyLabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
-//    label.backgroundColor = [UIColor greenColor];
-//    [cell.contentView addSubview:label];
-//    label.text = _dataArray[indexPath.row];
     
-    [cell configDate:_dataArray[indexPath.row]];
+    //    DFCopyLabel *label = [[DFCopyLabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
+    //    label.backgroundColor = [UIColor greenColor];
+    //    [cell.contentView addSubview:label];
+    //    label.text = _dataArray[indexPath.row];
     
+    //    [cell configDate:_dataArray[indexPath.row]];
+    
+    cell.textLabel.text = _dataArray[indexPath.row];
     
     return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    ViewController1 *vc = [[ViewController1 alloc] init];
-//    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-//    [self presentViewController:nc animated:YES completion:nil];
-}
-
--(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -161,5 +148,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
